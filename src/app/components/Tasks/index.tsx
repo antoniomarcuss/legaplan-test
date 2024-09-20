@@ -18,7 +18,7 @@ const Tasks = ({ task, onDelete, tasksCompleted }: TasksProps) => {
       </div>
       <span
         onClick={tasksCompleted}
-        className="w-28 lg:w-[274px] text-black text-base font-normal cursor-pointer"
+        className="w-28  lg:w-[274px] text-black text-base font-normal cursor-pointer"
       >
         {task}
       </span>
