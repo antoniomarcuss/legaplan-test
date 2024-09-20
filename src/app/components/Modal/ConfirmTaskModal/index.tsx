@@ -21,9 +21,12 @@ const ConfirmTaskModal = ({
           Nova Tarefa
         </h1>
         <div className="flex flex-col gap-2 mt-8">
-          <span className="h-[19px] text-black text-base font-normal font-['Inter Tight']">
-            Título
-          </span>
+          <div className="flex justify-between">
+            <span className="h-[19px] text-black text-base font-normal font-['Inter Tight']">
+              Título
+            </span>
+            {error && <p className="text-red-500  font-medium">{error}</p>}
+          </div>
 
           <form onSubmit={handleSubmit}>
             <input
@@ -35,7 +38,6 @@ const ConfirmTaskModal = ({
               className="border p-4 w-full rounded-lg placeholder:text-black/60 placeholder:font-['Inter Tight'] outline-none"
             />
           </form>
-          {error && <p className="text-red-500  font-medium">{error}</p>}
         </div>
         <div className="flex flex-col gap-4 lg:flex-row-reverse mt-8">
           <AddModalButton handleSubmit={handleSubmit} />
